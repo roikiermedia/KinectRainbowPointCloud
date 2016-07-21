@@ -136,3 +136,17 @@ PVector depthToWorld(int x, int y, int depthValue) {
   result.z = (float)(depth);
   return result;
 }
+
+void keyPressed() {
+  
+  if (key == CODED) {
+    if (keyCode == UP) {
+      tilt = tilt + 1;
+    } else if (keyCode == DOWN) {
+      tilt = tilt - 1;
+    } 
+  } else {
+    
+  }
+  kinect.setTilt(tilt);
+}
